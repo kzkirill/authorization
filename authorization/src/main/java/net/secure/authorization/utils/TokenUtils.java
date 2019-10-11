@@ -16,7 +16,7 @@ public class TokenUtils {
 	private static final String SUBJ_USER = "users/";
 	private static Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
 
-	public static String getTokent(String userlogin, Date expirationDate) {
+	public static String getToken(String userlogin, Date expirationDate) {
 		String jwt = Jwts.builder().setIssuer(hostURL)
 				.setSubject(SUBJ_USER+userlogin)
 				.setExpiration(expirationDate)
