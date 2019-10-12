@@ -8,7 +8,7 @@ import lombok.Data;
 @Data
 @Entity
 public class User {
-	private @Id String login;
+	private @Id String email;
 	private String password;
 	private String keyWord;
 	private String name;
@@ -17,9 +17,9 @@ public class User {
 		super();
 	}
 
-	public User(String login, String password, String keyWord, String name) {
+	public User(String email, String password, String keyWord, String name) {
 		super();
-		this.login = login;
+		this.email = email;
 		this.password = password;
 		this.keyWord = keyWord;
 		this.name = name;

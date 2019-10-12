@@ -27,12 +27,12 @@ public class TokenUtilsTest {
 		assertFalse(checkToken(goodToken + "sdfsdf456"));
 	}
 
-	@Test(expected = Throwable.class)
+	@Test
 	public void testTokenExpired() {
 		String userlogin1 ="login@On34e";
 		Date expiredDate = new Date(System.currentTimeMillis() - 60000);
 		String expiredToken = getToken(userlogin1, expiredDate);
-		checkToken(expiredToken);
+		assertFalse(checkToken(expiredToken));
 	}
 
 }
